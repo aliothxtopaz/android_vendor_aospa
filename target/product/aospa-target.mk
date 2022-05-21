@@ -69,6 +69,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.launcher.blur.appLaunch=0 \
     ro.sf.use_latest_hwc_vsync_period=0
 
+# Set default refresh rate threshold
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=60
+
 # Exfat FS
 PRODUCT_PACKAGES += \
     fsck.exfat \
