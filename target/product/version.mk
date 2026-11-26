@@ -26,13 +26,17 @@
 # and only changes per major Android releases.
 AOSPA_MAJOR_VERSION := topaz
 
+# Public ROM name used for build output filenames.
+ROM_NAME := ProjectAshes
+
+
 # The version code is the upgradable portion during the cycle of
 # every major Android release. Each version code upgrade indicates
 # our own major release during each lifecycle.
 ifdef AOSPA_BUILDVERSION
     AOSPA_MINOR_VERSION := $(AOSPA_BUILDVERSION)
 else
-    AOSPA_MINOR_VERSION := 1
+    AOSPA_MINOR_VERSION := 0.1
 endif
 
 # Build Variants
@@ -53,18 +57,18 @@ else
 endif
 
 # Build Date
-BUILD_DATE := $(shell date -u +%Y%m%d)
+BUILD_DATE := $(shell date -u '+%Y%m%d-%H%M')
 
 # AOSPA Version
-TMP_AOSPA_VERSION := $(AOSPA_MAJOR_VERSION)-
-ifeq ($(filter release,$(AOSPA_BUILD_VARIANT)),)
-    TMP_AOSPA_VERSION += $(AOSPA_BUILD_VARIANT)-
+ifeq ($(WITH_GMS),true)
+    AOSPA_GMS_VARIANT := GMS
+else
+    AOSPA_GMS_VARIANT := VANILLA
 endif
-ifeq ($(filter unofficial,$(AOSPA_BUILD_VARIANT)),)
-    TMP_AOSPA_VERSION += $(AOSPA_MINOR_VERSION)-
-endif
-TMP_AOSPA_VERSION += $(AOSPA_BUILD)-$(BUILD_DATE)
-AOSPA_VERSION := $(shell echo $(TMP_AOSPA_VERSION) | tr -d '[:space:]')
+
+# <device>-<buildtype>-<version>-<GMS|VANILLA>-<timestamp>
+AOSPA_VERSION := $(AOSPA_BUILD)-$(AOSPA_BUILD_VARIANT)-$(AOSPA_MINOR_VERSION)-$(AOSPA_GMS_VARIANT)-$(BUILD_DATE)
+AOSPA_VERSION := $(shell echo $(AOSPA_VERSION) | tr -d '[:space:]')
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.aospa.version=$(AOSPA_VERSION)

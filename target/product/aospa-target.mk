@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# GMS or VANILLA build. Only used for naming for now; the GMS packages are
+# always inherited because Pixel sepolicy must exist in the board phase.
+WITH_GMS ?= true
+
 # Abstruct
 PRODUCT_PACKAGES += \
     Abstruct
