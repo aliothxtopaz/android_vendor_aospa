@@ -78,3 +78,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.aospa.version.major=$(shell V1=$(AOSPA_MAJOR_VERSION); echo $${V1^}) \
     ro.aospa.version.minor=$(AOSPA_MINOR_VERSION) \
     ro.aospa.build.variant=$(shell V2=$(AOSPA_BUILD_VARIANT); echo $${V2^})
+
+# About phone banner (Settings -> AshesPreferenceController)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.ashes.version.major=$(shell V1=$(AOSPA_MAJOR_VERSION); echo $${V1^}) \
+    ro.ashes.version.minor=$(AOSPA_MINOR_VERSION) \
+    ro.ashes.build.type=$(shell V2=$(AOSPA_BUILD_VARIANT); echo $${V2^}) \
+    ro.ashes.maintainer=Sanjivns \
+    ro.codelinaro.revision=LA.QSSI.13.0.r1-17000-qssi.0
