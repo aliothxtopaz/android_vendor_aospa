@@ -22,11 +22,14 @@ PRODUCT_PACKAGES += \
     AOSPASystemUIOverlay \
     AOSPAWifiOverlay \
     FontGoogleSansLatoOverlay \
+    FontGoogleSansOverlay \
     FontHarmonySansOverlay \
     FontInterOverlay \
+    FontLinotteOverlay \
     FontManropeOverlay \
     FontRobotoOverlay \
     FontUrbanistOverlay \
+    FontVolteRoundOverlay \
     IconPackCircularAndroidOverlay \
     IconPackCircularLauncherOverlay \
     IconPackCircularSettingsOverlay \
