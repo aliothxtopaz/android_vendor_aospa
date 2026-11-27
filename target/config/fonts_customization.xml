@@ -162,10 +162,13 @@
   <alias name="harmonyos-sans-medium" to="harmonyos-sans" weight="500"/>
 
   <family customizationType="new-named-family" name="volteround">
-    <font weight="400" style="normal">VolteRounded.ttf</font>
-    <font weight="700" style="normal">VolteRoundedBold.ttf</font>
+    <font weight="300" style="normal">VolteRounded-Light.otf</font>
+    <font weight="400" style="normal">VolteRounded-Regular.otf</font>
+    <font weight="500" style="normal">VolteRounded-Medium.otf</font>
+    <font weight="600" style="normal">VolteRounded-Semibold.otf</font>
+    <font weight="700" style="normal">VolteRounded-Bold.otf</font>
   </family>
-  <alias name="volteround-medium" to="volteround" weight="700" />
+  <alias name="volteround-medium" to="volteround" weight="600" />
 
   <family customizationType="new-named-family" name="linotte">
     <font weight="300" style="normal">Linotte-Light.ttf</font>
