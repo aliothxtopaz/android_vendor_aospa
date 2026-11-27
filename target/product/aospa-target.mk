@@ -83,6 +83,14 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/aospa/prebuilts/fonts/,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
     vendor/aospa/target/config/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
+# Default monospace family (fonts.xml), must land in /system/fonts
+PRODUCT_PACKAGES += \
+    JetBrainsMono-Regular.ttf \
+    JetBrainsMono-Italic.ttf \
+    JetBrainsMono-Medium.ttf \
+    JetBrainsMono-Bold.ttf \
+    JetBrainsMono-BoldItalic.ttf
+
 $(call inherit-product, external/google-fonts/lato/fonts.mk)
 
 # Gestures
