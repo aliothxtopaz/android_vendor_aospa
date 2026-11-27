@@ -154,3 +154,12 @@ uses_miui_camera {
         },
     },
 }
+
+// Torch strength control: the device provides libcameraservice_extension.alioth
+// and libcameraservice falls back to its stub when TARGET_PROVIDES_CAMERA_PROVIDER_EXT_LIB
+// is not set.
+cc_defaults {
+    name: "libcameraservice_ext_lib_defaults",
+    static_libs: ["//device/xiaomi/alioth/camera:libcameraservice_extension.alioth"],
+    cppflags: ["-DTARGET_PROVIDES_CAMERA_PROVIDER_EXT_LIB"],
+}
