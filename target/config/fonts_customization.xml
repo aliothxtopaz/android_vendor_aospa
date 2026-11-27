@@ -43,11 +43,12 @@
   </family>
 
   <family customizationType="new-named-family" name="google-sans-medium">
-    <font weight="500" style="normal">GoogleSans-Regular.ttf
-      <axis tag="GRAD" stylevalue="0"/>
-      <axis tag="opsz" stylevalue="18.0"/>
-      <axis tag="wght" stylevalue="500"/>
-    </font>
+    <!-- Static Medium: asking the variable font for wght=500 is not honoured
+         for single-font families, which rendered titles as regular. -->
+    <font weight="400" style="normal">GoogleSansMedium.ttf</font>
+    <font weight="500" style="normal">GoogleSansMedium.ttf</font>
+    <font weight="600" style="normal">GoogleSansMedium.ttf</font>
+    <font weight="700" style="normal">GoogleSansMedium.ttf</font>
   </family>
 
   <family customizationType="new-named-family" name="google-sans-bold">
@@ -102,11 +103,8 @@
   </family>
 
   <family customizationType="new-named-family" name="google-sans-text-medium">
-    <font weight="500" style="normal">GoogleSans-Regular.ttf
-      <axis tag="GRAD" stylevalue="0"/>
-      <axis tag="opsz" stylevalue="17.0"/>
-      <axis tag="wght" stylevalue="500"/>
-    </font>
+    <font weight="400" style="normal">GoogleSansMedium.ttf</font>
+    <font weight="500" style="normal">GoogleSansMedium.ttf</font>
   </family>
 
   <family customizationType="new-named-family" name="google-sans-text-bold">
