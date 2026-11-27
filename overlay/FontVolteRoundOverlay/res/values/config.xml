@@ -17,6 +17,13 @@
 <resources>
     <string name="config_bodyFontFamily" translatable="false">volteround</string>
     <string name="config_bodyFontFamilyMedium" translatable="false">volteround-medium</string>
-    <string name="config_headlineFontFamily" translatable="false">volteround</string>
+    <!-- Volte Round hierarchy: headings/titles are Semibold, body text stays Regular -->
+    <string name="config_headlineFontFamily" translatable="false">volteround-medium</string>
     <string name="config_headlineFontFamilyMedium" translatable="false">volteround-medium</string>
+    <string name="config_clockFontFamily" translatable="false">volteround</string>
+    <string name="config_statusBarClockFontFamily" translatable="false">volteround</string>
+    <!-- Material text roles that are secondary/heavy by default: Regular for Volte Round -->
+    <string name="font_family_headline_material" translatable="false">volteround-medium</string>
+    <string name="font_family_body_2_material" translatable="false">volteround</string>
+    <string name="font_family_button_material" translatable="false">volteround</string>
 </resources>

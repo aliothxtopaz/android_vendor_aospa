@@ -19,7 +19,7 @@
 
     <overlay
         android:category="android.theme.customization.font"
-        android:priority="600"
+        android:priority="900"
         android:targetPackage="android" />
 
     <application
