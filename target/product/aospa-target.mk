@@ -74,6 +74,13 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
+# Dialer
+PRODUCT_PACKAGES += \
+    Dialer
+
+PRODUCT_COPY_FILES += \
+    packages/apps/Dialer/privapp_whitelist_com.android.dialer-ext.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.android.dialer-ext.xml
+
 # Game Space
 PRODUCT_PACKAGES += \
     GameSpace
